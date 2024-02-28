@@ -12,5 +12,7 @@ namespace QuizME.Services.QuizService
 		void SaveQuizToFile(Quiz quiz, string path);
 		void DeleteQuizFromFile(string path);
 		void AddQuestionToQuiz(Quiz quiz, Question question);
+		void CreateStudentPDF(Quiz quiz, string path, string title);
+		void CreateTeacherPDF(Quiz quiz, string path);
 	}
 }

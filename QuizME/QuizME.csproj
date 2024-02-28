@@ -11,6 +11,17 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="PDFsharp" Version="6.0.0" />
+    <PackageReference Include="PdfSharpCore" Version="1.3.63" />
+    <PackageReference Include="Select.HtmlToPdf" Version="23.2.0" />
+    <PackageReference Include="Select.HtmlToPdf.NetCore" Version="23.2.0" />
+    <PackageReference Include="Select.Pdf" Version="23.2.0" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Folder Include="Utilities\" />
   </ItemGroup>
 
 </Project>

@@ -3,6 +3,7 @@ using System.Net;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using QuizME.Models;
+using QuizME.Services.PrintService;
 using QuizME.Services.QuestionService;
 
 namespace QuizME.Services.QuizService
@@ -10,10 +11,12 @@ namespace QuizME.Services.QuizService
 	public class QuizService : IQuizService
 	{
 		private readonly IQuestionService _questionService;
+		private readonly IPrintService _printService;
 
-		public QuizService(IQuestionService questionService)
+		public QuizService(IQuestionService questionService, IPrintService printService)
 		{
 			_questionService = questionService;
+			_printService = printService;
 		}
 
 		public Quiz CreateQuiz()
@@ -53,18 +56,31 @@ namespace QuizME.Services.QuizService
 
 		public Quiz LoadQuizFromFile(string path)
 		{
-			if (path == null) return null;
+			// Read the JSON string from the file
 			var json = File.ReadAllText(path);
-			var quiz = JsonConvert.DeserializeObject<Quiz>(json);
+
+			// Setup the JsonSerializerSettings
+			var settings = new JsonSerializerSettings();
+			settings.TypeNameHandling = TypeNameHandling.Auto;
+
+			// Deserialize the JSON string into a Quiz object
+			var quiz = JsonConvert.DeserializeObject<Quiz>(json, settings);
 			
 			return quiz;
 
 		}
-
-		public void SaveQuizToFile(Quiz quiz, string path)
+		
+		public void SaveQuizToFile(Quiz quiz, string filePath)
 		{
-			var json = JsonConvert.SerializeObject(quiz);
-			File.WriteAllText(path + ".quiz", json);
+			// Setup the JsonSerializerSettings
+			var settings = new JsonSerializerSettings();
+			settings.TypeNameHandling = TypeNameHandling.Auto;
+
+			// Serialize the Quiz object into a JSON string
+			var json = JsonConvert.SerializeObject(quiz, settings);
+
+			// Write the JSON string to the file
+			File.WriteAllText(filePath, json);
 		}
 
 		public void DeleteQuizFromFile(string path)
@@ -76,6 +92,18 @@ namespace QuizME.Services.QuizService
 		{
 			quiz.Questions.Add(question);
 			quiz.OnQuestionAdded();
+		}
+
+		public void CreateStudentPDF(Quiz quiz, string path, string title)
+		{
+			_printService.CreateStudentPDF(quiz, path);
+		}
+
+		public void CreateTeacherPDF(Quiz quiz, string path)
+		{
+			/*var html = _printService.GenerateTeacherHTML(quiz);
+			_printService.GeneratePDF(path, html, title);*/
+			_printService.CreateTeacherPDF(quiz, path);
 		}
 	}
 }

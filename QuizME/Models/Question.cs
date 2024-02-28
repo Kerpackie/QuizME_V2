@@ -1,4 +1,6 @@
-﻿namespace QuizME.Models
+﻿using Newtonsoft.Json;
+
+namespace QuizME.Models
 {
 	public abstract class Question
 	{

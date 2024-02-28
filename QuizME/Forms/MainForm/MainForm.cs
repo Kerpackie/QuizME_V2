@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 using QuizME.Forms.Questions.TrueFalseForm;
 using QuizME.Forms.QuizForm;
 
@@ -52,13 +53,17 @@ namespace QuizME.Forms.MainForm
 
         private void btnLoadQuiz_Click(object sender, EventArgs e)
         {
-            var loadQuiz = _formService.OpenFile();
-
-            if (loadQuiz != null)
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "JSON files (*.quiz)|*.quiz|All files (*.*)|*.*";
+            openFileDialog.Title = "Open a Quiz File";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                var filePath = openFileDialog.FileName;
                 try
                 {
-                    var quiz = _quizService.LoadQuizFromFile(loadQuiz);
+                    var quiz = _quizService.LoadQuizFromFile(filePath);
+
+                    // Pass the Quiz object to the QuizForm
                     _formService.OpenFormWithArgument<QuizForm.QuizForm, Quiz>(quiz);
                 }
                 catch (Exception exception)

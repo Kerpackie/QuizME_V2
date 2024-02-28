@@ -32,11 +32,6 @@ namespace QuizME.Forms.Questions.TrueFalseForm
             btnCancel.Click += (sender, e) => Close();
         }
 
-        public TrueFalseForm()
-        {
-
-        }
-
         protected void btnSave_Click(object sender, EventArgs e)
         {
             if (this.ValidateTrueFalseFormInputs(tbMarks, tbText, rbTrue, rbFalse, out var marks))

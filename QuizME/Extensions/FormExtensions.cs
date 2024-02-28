@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using QuizME.Forms.Questions.MultiChoiceForm;
 using QuizME.Forms.QuizForm;
 using QuizME.Forms.Questions.NumericalForm;
 using QuizME.Forms.Questions.OpenForm;
@@ -38,6 +39,16 @@ namespace QuizME.Extensions
 		{
 			return ValidateInputs(tbMarks, tbText, out marks) &&
 			       !string.IsNullOrWhiteSpace(notes.Text);
+		}
+		
+		public static bool ValidateMultiChoiceFormInputs(this MultiChoiceForm form, TextBox tbMarks, TextBox tbText, 
+			TextBox tbOption1, TextBox tbOption2, TextBox tbOption3, TextBox tbOption4, out int marks)
+		{
+			return ValidateInputs(tbMarks, tbText, out marks) &&
+			       !string.IsNullOrWhiteSpace(tbOption1.Text) &&
+			       !string.IsNullOrWhiteSpace(tbOption2.Text) &&
+			       !string.IsNullOrWhiteSpace(tbOption3.Text) &&
+			       !string.IsNullOrWhiteSpace(tbOption4.Text);
 		}
 	}
 }

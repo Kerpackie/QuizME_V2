@@ -4,6 +4,7 @@ using QuizME.Services.QuizService;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using QuizME.Forms.MainForm;
+using QuizME.Services.PrintService;
 
 namespace QuizME
 {
@@ -34,6 +35,7 @@ namespace QuizME
                     services.AddSingleton<IFormService, FormService>();
                     services.AddScoped<IQuizService, QuizService>();
                     services.AddTransient<IQuestionService, QuestionService>();
+                    services.AddSingleton<IPrintService, PrintService>();
                     services.AddTransient<MainForm>();
                 });
         }

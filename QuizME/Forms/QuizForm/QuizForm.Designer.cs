@@ -28,198 +28,307 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbQuizMain = new System.Windows.Forms.GroupBox();
-            this.rtbInstructions = new System.Windows.Forms.RichTextBox();
-            this.lblInstructions = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.lblMarks = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblTopic = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblModule = new System.Windows.Forms.Label();
-            this.btnTrueFalse = new System.Windows.Forms.Button();
-            this.lvQuestions = new System.Windows.Forms.ListView();
-            this.colHeadQuestion = new System.Windows.Forms.ColumnHeader();
-            this.colHeadType = new System.Windows.Forms.ColumnHeader();
-            this.btnNumerical = new System.Windows.Forms.Button();
-            this.btnOpen = new System.Windows.Forms.Button();
-            this.gbQuizMain.SuspendLayout();
-            this.SuspendLayout();
+            gbQuizMain = new GroupBox();
+            rtbInstructions = new RichTextBox();
+            lblInstructions = new Label();
+            tbMarks = new TextBox();
+            lblMarks = new Label();
+            tbDescription = new TextBox();
+            lblDescription = new Label();
+            tbTopic = new TextBox();
+            lblTopic = new Label();
+            tbModule = new TextBox();
+            lblModule = new Label();
+            btnTrueFalse = new Button();
+            lvQuestions = new ListView();
+            colHeadQuestion = new ColumnHeader();
+            colHeadType = new ColumnHeader();
+            btnNumerical = new Button();
+            btnOpen = new Button();
+            gbAddQuestion = new GroupBox();
+            btnMultiChoice = new Button();
+            gbAdmin = new GroupBox();
+            btnGenerateStudentVersionPDF = new Button();
+            btnGenerateTutorVersionPDF = new Button();
+            btnSaveQuiz = new Button();
+            btnLoadQuiz = new Button();
+            gbQuizMain.SuspendLayout();
+            gbAddQuestion.SuspendLayout();
+            gbAdmin.SuspendLayout();
+            SuspendLayout();
             // 
             // gbQuizMain
             // 
-            this.gbQuizMain.Controls.Add(this.rtbInstructions);
-            this.gbQuizMain.Controls.Add(this.lblInstructions);
-            this.gbQuizMain.Controls.Add(this.textBox4);
-            this.gbQuizMain.Controls.Add(this.lblMarks);
-            this.gbQuizMain.Controls.Add(this.textBox3);
-            this.gbQuizMain.Controls.Add(this.lblDescription);
-            this.gbQuizMain.Controls.Add(this.textBox2);
-            this.gbQuizMain.Controls.Add(this.lblTopic);
-            this.gbQuizMain.Controls.Add(this.textBox1);
-            this.gbQuizMain.Controls.Add(this.lblModule);
-            this.gbQuizMain.Location = new System.Drawing.Point(24, 14);
-            this.gbQuizMain.Name = "gbQuizMain";
-            this.gbQuizMain.Size = new System.Drawing.Size(747, 177);
-            this.gbQuizMain.TabIndex = 0;
-            this.gbQuizMain.TabStop = false;
+            gbQuizMain.Controls.Add(rtbInstructions);
+            gbQuizMain.Controls.Add(lblInstructions);
+            gbQuizMain.Controls.Add(tbMarks);
+            gbQuizMain.Controls.Add(lblMarks);
+            gbQuizMain.Controls.Add(tbDescription);
+            gbQuizMain.Controls.Add(lblDescription);
+            gbQuizMain.Controls.Add(tbTopic);
+            gbQuizMain.Controls.Add(lblTopic);
+            gbQuizMain.Controls.Add(tbModule);
+            gbQuizMain.Controls.Add(lblModule);
+            gbQuizMain.Location = new Point(28, 16);
+            gbQuizMain.Margin = new Padding(4, 3, 4, 3);
+            gbQuizMain.Name = "gbQuizMain";
+            gbQuizMain.Padding = new Padding(4, 3, 4, 3);
+            gbQuizMain.Size = new Size(872, 204);
+            gbQuizMain.TabIndex = 0;
+            gbQuizMain.TabStop = false;
             // 
             // rtbInstructions
             // 
-            this.rtbInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbInstructions.Location = new System.Drawing.Point(419, 16);
-            this.rtbInstructions.Name = "rtbInstructions";
-            this.rtbInstructions.Size = new System.Drawing.Size(305, 136);
-            this.rtbInstructions.TabIndex = 9;
-            this.rtbInstructions.Text = "";
+            rtbInstructions.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            rtbInstructions.Location = new Point(489, 18);
+            rtbInstructions.Margin = new Padding(4, 3, 4, 3);
+            rtbInstructions.Name = "rtbInstructions";
+            rtbInstructions.Size = new Size(355, 156);
+            rtbInstructions.TabIndex = 9;
+            rtbInstructions.Text = "";
             // 
             // lblInstructions
             // 
-            this.lblInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstructions.Location = new System.Drawing.Point(309, 16);
-            this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(103, 23);
-            this.lblInstructions.TabIndex = 8;
-            this.lblInstructions.Text = "Instructions";
+            lblInstructions.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblInstructions.Location = new Point(360, 18);
+            lblInstructions.Margin = new Padding(4, 0, 4, 0);
+            lblInstructions.Name = "lblInstructions";
+            lblInstructions.Size = new Size(120, 27);
+            lblInstructions.TabIndex = 8;
+            lblInstructions.Text = "Instructions";
             // 
-            // textBox4
+            // tbMarks
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(123, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 26);
-            this.textBox4.TabIndex = 7;
+            tbMarks.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbMarks.Location = new Point(144, 144);
+            tbMarks.Margin = new Padding(4, 3, 4, 3);
+            tbMarks.Name = "tbMarks";
+            tbMarks.Size = new Size(188, 26);
+            tbMarks.TabIndex = 7;
             // 
             // lblMarks
             // 
-            this.lblMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarks.Location = new System.Drawing.Point(18, 128);
-            this.lblMarks.Name = "lblMarks";
-            this.lblMarks.Size = new System.Drawing.Size(99, 23);
-            this.lblMarks.TabIndex = 6;
-            this.lblMarks.Text = "Marks:";
+            lblMarks.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMarks.Location = new Point(21, 148);
+            lblMarks.Margin = new Padding(4, 0, 4, 0);
+            lblMarks.Name = "lblMarks";
+            lblMarks.Size = new Size(115, 27);
+            lblMarks.TabIndex = 6;
+            lblMarks.Text = "Marks:";
             // 
-            // textBox3
+            // tbDescription
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(123, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 26);
-            this.textBox3.TabIndex = 5;
+            tbDescription.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbDescription.Location = new Point(144, 98);
+            tbDescription.Margin = new Padding(4, 3, 4, 3);
+            tbDescription.Name = "tbDescription";
+            tbDescription.Size = new Size(188, 26);
+            tbDescription.TabIndex = 5;
             // 
             // lblDescription
             // 
-            this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(18, 88);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(99, 23);
-            this.lblDescription.TabIndex = 4;
-            this.lblDescription.Text = "Description:";
+            lblDescription.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDescription.Location = new Point(21, 102);
+            lblDescription.Margin = new Padding(4, 0, 4, 0);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(115, 27);
+            lblDescription.TabIndex = 4;
+            lblDescription.Text = "Description:";
             // 
-            // textBox2
+            // tbTopic
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(122, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 26);
-            this.textBox2.TabIndex = 3;
+            tbTopic.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbTopic.Location = new Point(142, 58);
+            tbTopic.Margin = new Padding(4, 3, 4, 3);
+            tbTopic.Name = "tbTopic";
+            tbTopic.Size = new Size(188, 26);
+            tbTopic.TabIndex = 3;
             // 
             // lblTopic
             // 
-            this.lblTopic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopic.Location = new System.Drawing.Point(18, 53);
-            this.lblTopic.Name = "lblTopic";
-            this.lblTopic.Size = new System.Drawing.Size(77, 23);
-            this.lblTopic.TabIndex = 2;
-            this.lblTopic.Text = "Topic:";
+            lblTopic.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTopic.Location = new Point(21, 61);
+            lblTopic.Margin = new Padding(4, 0, 4, 0);
+            lblTopic.Name = "lblTopic";
+            lblTopic.Size = new Size(90, 27);
+            lblTopic.TabIndex = 2;
+            lblTopic.Text = "Topic:";
             // 
-            // textBox1
+            // tbModule
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(122, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 26);
-            this.textBox1.TabIndex = 1;
+            tbModule.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbModule.Location = new Point(142, 15);
+            tbModule.Margin = new Padding(4, 3, 4, 3);
+            tbModule.Name = "tbModule";
+            tbModule.Size = new Size(188, 26);
+            tbModule.TabIndex = 1;
             // 
             // lblModule
             // 
-            this.lblModule.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModule.Location = new System.Drawing.Point(18, 16);
-            this.lblModule.Name = "lblModule";
-            this.lblModule.Size = new System.Drawing.Size(77, 23);
-            this.lblModule.TabIndex = 0;
-            this.lblModule.Text = "Module:";
+            lblModule.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblModule.Location = new Point(21, 18);
+            lblModule.Margin = new Padding(4, 0, 4, 0);
+            lblModule.Name = "lblModule";
+            lblModule.Size = new Size(90, 27);
+            lblModule.TabIndex = 0;
+            lblModule.Text = "Module:";
             // 
             // btnTrueFalse
             // 
-            this.btnTrueFalse.Location = new System.Drawing.Point(381, 197);
-            this.btnTrueFalse.Name = "btnTrueFalse";
-            this.btnTrueFalse.Size = new System.Drawing.Size(129, 42);
-            this.btnTrueFalse.TabIndex = 2;
-            this.btnTrueFalse.Text = "True False";
-            this.btnTrueFalse.UseVisualStyleBackColor = true;
-            this.btnTrueFalse.Click += new System.EventHandler(this.btnTrueFalse_Click);
+            btnTrueFalse.Location = new Point(7, 28);
+            btnTrueFalse.Margin = new Padding(4, 3, 4, 3);
+            btnTrueFalse.Name = "btnTrueFalse";
+            btnTrueFalse.Size = new Size(114, 48);
+            btnTrueFalse.TabIndex = 2;
+            btnTrueFalse.Text = "True False";
+            btnTrueFalse.UseVisualStyleBackColor = true;
+            btnTrueFalse.Click += btnTrueFalse_Click;
             // 
             // lvQuestions
             // 
-            this.lvQuestions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { this.colHeadQuestion, this.colHeadType });
-            this.lvQuestions.HideSelection = false;
-            this.lvQuestions.Location = new System.Drawing.Point(24, 196);
-            this.lvQuestions.Name = "lvQuestions";
-            this.lvQuestions.Size = new System.Drawing.Size(347, 357);
-            this.lvQuestions.TabIndex = 3;
-            this.lvQuestions.UseCompatibleStateImageBehavior = false;
-            this.lvQuestions.View = System.Windows.Forms.View.Details;
+            lvQuestions.Columns.AddRange(new ColumnHeader[] { colHeadQuestion, colHeadType });
+            lvQuestions.Location = new Point(28, 226);
+            lvQuestions.Margin = new Padding(4, 3, 4, 3);
+            lvQuestions.Name = "lvQuestions";
+            lvQuestions.Size = new Size(404, 411);
+            lvQuestions.TabIndex = 3;
+            lvQuestions.UseCompatibleStateImageBehavior = false;
+            lvQuestions.View = View.Details;
             // 
             // colHeadQuestion
             // 
-            this.colHeadQuestion.Text = "Question:";
-            this.colHeadQuestion.Width = 243;
+            colHeadQuestion.Text = "Question:";
+            colHeadQuestion.Width = 243;
             // 
             // colHeadType
             // 
-            this.colHeadType.Text = "Type";
-            this.colHeadType.Width = 100;
+            colHeadType.Text = "Type";
+            colHeadType.Width = 100;
             // 
             // btnNumerical
             // 
-            this.btnNumerical.Location = new System.Drawing.Point(516, 197);
-            this.btnNumerical.Name = "btnNumerical";
-            this.btnNumerical.Size = new System.Drawing.Size(129, 42);
-            this.btnNumerical.TabIndex = 4;
-            this.btnNumerical.Text = "Numerical";
-            this.btnNumerical.UseVisualStyleBackColor = true;
-            this.btnNumerical.Click += new System.EventHandler(this.btnNumerical_Click);
+            btnNumerical.Location = new Point(128, 28);
+            btnNumerical.Margin = new Padding(4, 3, 4, 3);
+            btnNumerical.Name = "btnNumerical";
+            btnNumerical.Size = new Size(114, 48);
+            btnNumerical.TabIndex = 4;
+            btnNumerical.Text = "Numerical";
+            btnNumerical.UseVisualStyleBackColor = true;
+            btnNumerical.Click += btnNumerical_Click;
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(651, 197);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(129, 42);
-            this.btnOpen.TabIndex = 5;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            btnOpen.Location = new Point(7, 82);
+            btnOpen.Margin = new Padding(4, 3, 4, 3);
+            btnOpen.Name = "btnOpen";
+            btnOpen.Size = new Size(114, 48);
+            btnOpen.TabIndex = 5;
+            btnOpen.Text = "Open";
+            btnOpen.UseVisualStyleBackColor = true;
+            btnOpen.Click += btnOpen_Click;
+            // 
+            // gbAddQuestion
+            // 
+            gbAddQuestion.Controls.Add(btnMultiChoice);
+            gbAddQuestion.Controls.Add(btnTrueFalse);
+            gbAddQuestion.Controls.Add(btnOpen);
+            gbAddQuestion.Controls.Add(btnNumerical);
+            gbAddQuestion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            gbAddQuestion.Location = new Point(444, 229);
+            gbAddQuestion.Name = "gbAddQuestion";
+            gbAddQuestion.Size = new Size(249, 250);
+            gbAddQuestion.TabIndex = 6;
+            gbAddQuestion.TabStop = false;
+            gbAddQuestion.Text = "Add Question";
+            // 
+            // btnMultiChoice
+            // 
+            btnMultiChoice.Location = new Point(128, 82);
+            btnMultiChoice.Margin = new Padding(4, 3, 4, 3);
+            btnMultiChoice.Name = "btnMultiChoice";
+            btnMultiChoice.Size = new Size(114, 48);
+            btnMultiChoice.TabIndex = 6;
+            btnMultiChoice.Text = "MultiChoice";
+            btnMultiChoice.UseVisualStyleBackColor = true;
+            btnMultiChoice.Click += btnMultiChoice_Click;
+            // 
+            // gbAdmin
+            // 
+            gbAdmin.Controls.Add(btnGenerateStudentVersionPDF);
+            gbAdmin.Controls.Add(btnGenerateTutorVersionPDF);
+            gbAdmin.Controls.Add(btnSaveQuiz);
+            gbAdmin.Controls.Add(btnLoadQuiz);
+            gbAdmin.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            gbAdmin.Location = new Point(709, 229);
+            gbAdmin.Name = "gbAdmin";
+            gbAdmin.Size = new Size(191, 250);
+            gbAdmin.TabIndex = 7;
+            gbAdmin.TabStop = false;
+            gbAdmin.Text = "Save/Load:";
+            // 
+            // btnGenerateStudentVersionPDF
+            // 
+            btnGenerateStudentVersionPDF.Location = new Point(7, 190);
+            btnGenerateStudentVersionPDF.Margin = new Padding(4, 3, 4, 3);
+            btnGenerateStudentVersionPDF.Name = "btnGenerateStudentVersionPDF";
+            btnGenerateStudentVersionPDF.Size = new Size(177, 48);
+            btnGenerateStudentVersionPDF.TabIndex = 7;
+            btnGenerateStudentVersionPDF.Text = "GenerateStudentPDF";
+            btnGenerateStudentVersionPDF.UseVisualStyleBackColor = true;
+            btnGenerateStudentVersionPDF.Click += btnGenerateStudentVersionPDF_Click;
+            // 
+            // btnGenerateTutorVersionPDF
+            // 
+            btnGenerateTutorVersionPDF.Location = new Point(7, 136);
+            btnGenerateTutorVersionPDF.Margin = new Padding(4, 3, 4, 3);
+            btnGenerateTutorVersionPDF.Name = "btnGenerateTutorVersionPDF";
+            btnGenerateTutorVersionPDF.Size = new Size(177, 48);
+            btnGenerateTutorVersionPDF.TabIndex = 6;
+            btnGenerateTutorVersionPDF.Text = "Generate Tutor PDF";
+            btnGenerateTutorVersionPDF.UseVisualStyleBackColor = true;
+            btnGenerateTutorVersionPDF.Click += btnGenerateTutorVersionPDF_Click;
+            // 
+            // btnSaveQuiz
+            // 
+            btnSaveQuiz.Location = new Point(7, 28);
+            btnSaveQuiz.Margin = new Padding(4, 3, 4, 3);
+            btnSaveQuiz.Name = "btnSaveQuiz";
+            btnSaveQuiz.Size = new Size(177, 48);
+            btnSaveQuiz.TabIndex = 2;
+            btnSaveQuiz.Text = "Save";
+            btnSaveQuiz.UseVisualStyleBackColor = true;
+            btnSaveQuiz.Click += btnSaveQuiz_Click;
+            // 
+            // btnLoadQuiz
+            // 
+            btnLoadQuiz.Location = new Point(7, 82);
+            btnLoadQuiz.Margin = new Padding(4, 3, 4, 3);
+            btnLoadQuiz.Name = "btnLoadQuiz";
+            btnLoadQuiz.Size = new Size(177, 48);
+            btnLoadQuiz.TabIndex = 5;
+            btnLoadQuiz.Text = "Load";
+            btnLoadQuiz.UseVisualStyleBackColor = true;
+            btnLoadQuiz.Click += btnLoadQuiz_Click;
             // 
             // QuizForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(794, 564);
-            this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.btnNumerical);
-            this.Controls.Add(this.lvQuestions);
-            this.Controls.Add(this.btnTrueFalse);
-            this.Controls.Add(this.gbQuizMain);
-            this.Location = new System.Drawing.Point(15, 15);
-            this.MaximizeBox = false;
-            this.Name = "QuizForm";
-            this.gbQuizMain.ResumeLayout(false);
-            this.gbQuizMain.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(926, 651);
+            Controls.Add(gbAdmin);
+            Controls.Add(gbAddQuestion);
+            Controls.Add(lvQuestions);
+            Controls.Add(gbQuizMain);
+            Location = new Point(15, 15);
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            Name = "QuizForm";
+            gbQuizMain.ResumeLayout(false);
+            gbQuizMain.PerformLayout();
+            gbAddQuestion.ResumeLayout(false);
+            gbAdmin.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         private System.Windows.Forms.Button btnOpen;
@@ -238,18 +347,26 @@
         private System.Windows.Forms.Label lblInstructions;
 
         private System.Windows.Forms.Label lblMarks;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbMarks;
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbModule;
         private System.Windows.Forms.Label lblTopic;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbTopic;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbDescription;
 
         private System.Windows.Forms.Label lblModule;
         private System.Windows.Forms.GroupBox gbQuizMain;
 
 
         #endregion
+
+        private GroupBox gbAddQuestion;
+        private Button btnMultiChoice;
+        private GroupBox gbAdmin;
+        private Button btnGenerateStudentVersionPDF;
+        private Button btnGenerateTutorVersionPDF;
+        private Button btnSaveQuiz;
+        private Button btnLoadQuiz;
     }
 }
